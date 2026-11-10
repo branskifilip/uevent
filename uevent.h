@@ -14,6 +14,10 @@ namespace uevent {
             return false;
         }
 
+        int size(){
+            return _targets.size();
+        }
+
         void invoke(ArgT... args) {
             for (auto t : _targets)
                 t(args...);
